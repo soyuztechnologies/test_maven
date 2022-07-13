@@ -61,7 +61,7 @@ public class AddressOdataAgent implements ODataInterface {
 		Vendor vendor = (Vendor)sourceData;
  		Optional<address> existingAddr = addressAPI.findById((String) targetKeys.get("AddressId"));
 		address newAddr = existingAddr.get();
-		//newAddr.setVendor(vendor);
+		newAddr.setVendor(vendor);
 		addressAPI.save(newAddr);
  		
 	}

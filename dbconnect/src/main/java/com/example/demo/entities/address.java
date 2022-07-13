@@ -46,10 +46,14 @@ public class address {
 	
 	@ManyToOne
 	@JoinColumn(name = "vendor_id", referencedColumnName = "id")
-	@Setter
-	@Getter
 	public Vendor vendor;
 	
+	public Vendor getVendor() {
+		return vendor;
+	}
+	public void setVendor(Vendor vendor) {
+		this.vendor = vendor;
+	}
 	public address() {
 		
 	}
